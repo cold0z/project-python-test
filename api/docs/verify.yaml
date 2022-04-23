@@ -1,0 +1,28 @@
+Verification process
+---
+tags:
+  - Verify
+parameters:
+  - in: body
+    type: string
+    name: account
+    required: true
+    description: Verification 8 digits and email
+
+    schema:
+            type: object
+            properties:
+              email:
+                type: string
+              code:
+                type: string
+
+
+  
+
+responses:
+  202:
+    description: User verified
+  200:
+    description: Pin Errors 
+  

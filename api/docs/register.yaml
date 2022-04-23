@@ -1,0 +1,28 @@
+First Step Registration
+---
+tags:
+  - Register
+parameters:
+  - in: body
+    type: string
+    name: user
+    required: true
+    description: Must supply a valid 'email' and strong 'password'. Password must be 8 characters including one uppercase letter and alphanumeric characters
+
+    schema:
+            type: object
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+
+
+  
+
+responses:
+  201:
+    description: User Created Succesfuly
+  400:
+    description: Json Invalid  | Must supply a valid 'email' and strong 'password'
+  
