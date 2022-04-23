@@ -1,0 +1,9 @@
+__pycache__
+env/
+.tox
+.cache
+.pytest_cache
+.coverage
+htmlcov/
+.xprocess
+.vscode
