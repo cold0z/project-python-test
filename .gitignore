@@ -7,3 +7,5 @@ env/
 htmlcov/
 .xprocess
 .vscode
+.git
+api/constants.py

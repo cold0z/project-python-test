@@ -1,15 +1,10 @@
-
 from flask import Flask
-from api.route.auth import auth_api
 from flasgger import Swagger
-
+from api.route.auth import auth_api
 def create_app():
-
     app = Flask(__name__)
     app.register_blueprint(auth_api)
-    
-    
-    templateSg = {
+    template = {
         "swagger": "2.0",
         "info": {
             "title": "Basic Auth & resgitration rest API",
@@ -29,8 +24,7 @@ def create_app():
             "https"
         ],
     }
-    
-    swagger_configSg = {
+    swagger_config = {
         "headers": [
         ],
         "specs": [
@@ -45,6 +39,5 @@ def create_app():
         "swagger_ui": True,
         "specs_route": "/spec"
     }
-    Swagger(app=app,config=swagger_configSg, template=templateSg)
-
+    Swagger(app=app,config=swagger_config, template=template)
     return app

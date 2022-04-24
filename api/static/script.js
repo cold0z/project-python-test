@@ -3,10 +3,7 @@ const email = document.getElementById("emailInput").value
 const messageDiv = document.getElementById("message-retour")
 const codeDiv = document.getElementById("codeContainer")
 
-
-
 codes[0].focus()
-
 codes.forEach((code, idx) => {
     code.addEventListener('keydown', (e) => {
         if(e.key >= 0 && e.key <=9) {
@@ -24,10 +21,7 @@ codes.forEach((code, idx) => {
             }
             ,20)
         }
-        
     })
-    
-    
 })
 
 
@@ -46,8 +40,6 @@ function UserAction(email,code) {
              }else{
                 codeDiv.style.display ="default"
              }
-
-
          }
     };
     xhttp.open("POST", "http://127.0.0.1:5000//api/v1/auth/verify-code", true);

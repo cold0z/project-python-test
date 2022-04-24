@@ -1,13 +1,10 @@
 from mimetypes import init
 import uuid
+import unittest
 from api import create_app
 
 
-import unittest
-
-
 class FlaskTest(unittest.TestCase):
-
 
     def test_register(self):
         application = create_app()
